@@ -24,7 +24,8 @@ CREATE TABLE IF NOT EXISTS `LittleLemonDB`.`Staff` (
   `FirstName` VARCHAR(255) NOT NULL,
   `LastName` VARCHAR(255) NOT NULL,
   `Role` VARCHAR(255) NOT NULL,
-  `Salary` DECIMAL(6,2) NOT NULL,
+  `Salary` DECIMAL(10,2) NOT NULL,
+  `CurrencySalary` VARCHAR(255) NOT NULL,
   `ContactNumber` VARCHAR(255) NULL,
   `Email` VARCHAR(255) NULL,
   PRIMARY KEY (`StaffID`))
@@ -38,8 +39,8 @@ DROP TABLE IF EXISTS `LittleLemonDB`.`Customer` ;
 
 CREATE TABLE IF NOT EXISTS `LittleLemonDB`.`Customer` (
   `CustomerID` INT NOT NULL AUTO_INCREMENT,
-  `First Name` VARCHAR(255) NOT NULL,
-  `Last Name` VARCHAR(255) NOT NULL,
+  `FirstName` VARCHAR(255) NOT NULL,
+  `LastName` VARCHAR(255) NOT NULL,
   `Email` VARCHAR(255) NULL,
   `Phone` VARCHAR(255) NULL,
   PRIMARY KEY (`CustomerID`))
@@ -81,10 +82,9 @@ DROP TABLE IF EXISTS `LittleLemonDB`.`MenuItems` ;
 
 CREATE TABLE IF NOT EXISTS `LittleLemonDB`.`MenuItems` (
   `ItemID` INT NOT NULL AUTO_INCREMENT,
-  `Name` VARCHAR(255) NULL,
-  `Type` VARCHAR(255) NULL,
-  `Price` DECIMAL(6,2) NULL,
-  `MenuItemscol` VARCHAR(45) NULL,
+  `CourseName` VARCHAR(255) NOT NULL,
+  `Type` VARCHAR(255) NOT NULL,
+  `Price` DECIMAL(6,2) NOT NULL,
   PRIMARY KEY (`ItemID`))
 ENGINE = InnoDB;
 
@@ -97,6 +97,7 @@ DROP TABLE IF EXISTS `LittleLemonDB`.`Menu` ;
 CREATE TABLE IF NOT EXISTS `LittleLemonDB`.`Menu` (
   `MenuID` INT NOT NULL,
   `ItemID` INT NOT NULL,
+  `MenuName` VARCHAR(255) NOT NULL,
   `Cuisine` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`MenuID`, `ItemID`),
   INDEX `MenuItems_FK_idx` (`ItemID` ASC) VISIBLE,
