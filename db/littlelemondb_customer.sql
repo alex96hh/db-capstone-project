@@ -29,7 +29,7 @@ CREATE TABLE `customer` (
   `Email` varchar(255) DEFAULT NULL,
   `Phone` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`CustomerID`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,7 +38,6 @@ CREATE TABLE `customer` (
 
 LOCK TABLES `customer` WRITE;
 /*!40000 ALTER TABLE `customer` DISABLE KEYS */;
-INSERT INTO `customer` VALUES (1,'John','Doe','john.doe@example.com','555-0101'),(2,'Jane','Smith','jane.smith@example.com','555-0102'),(3,'Alice','Brown','alice.brown@example.com','555-0103'),(4,'Bob','Johnson','bob.johnson@example.com','555-0104'),(5,'Charlie','Davis','charlie.davis@example.com','555-0105'),(6,'Emily','Clark','emily.clark@example.com','555-0106'),(7,'Frank','Miller','frank.miller@example.com','555-0107'),(8,'Grace','Lee','grace.lee@example.com','555-0108'),(9,'Hank','Wilson','hank.wilson@example.com','555-0109'),(10,'Ivy','Moore','ivy.moore@example.com','555-0110');
 /*!40000 ALTER TABLE `customer` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-11-06  7:35:19
+-- Dump completed on 2024-11-07  8:29:42

@@ -27,14 +27,14 @@ CREATE TABLE `bookings` (
   `Date` date NOT NULL,
   `TableNo` int NOT NULL,
   `BookingSlot` time DEFAULT NULL,
-  `StaffID` int NOT NULL,
-  `CustomerID` int NOT NULL,
+  `StaffID` int DEFAULT NULL,
+  `CustomerID` int DEFAULT NULL,
   PRIMARY KEY (`BookingID`),
   KEY `Staff_FK_idx` (`StaffID`),
   KEY `Customer_B_FK_idx` (`CustomerID`),
   CONSTRAINT `Customer_B_FK` FOREIGN KEY (`CustomerID`) REFERENCES `customer` (`CustomerID`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `Staff_FK` FOREIGN KEY (`StaffID`) REFERENCES `staff` (`StaffID`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,7 +43,6 @@ CREATE TABLE `bookings` (
 
 LOCK TABLES `bookings` WRITE;
 /*!40000 ALTER TABLE `bookings` DISABLE KEYS */;
-INSERT INTO `bookings` VALUES (1,'2024-11-01',101,'18:00:00',1,1),(2,'2024-11-02',102,'19:00:00',2,2),(3,'2024-11-03',103,'20:00:00',3,3),(4,'2024-11-04',104,'18:30:00',4,4),(5,'2024-11-05',105,'19:30:00',5,5),(6,'2024-11-06',106,'20:30:00',6,6),(7,'2024-11-07',107,'18:00:00',7,7),(8,'2024-11-08',108,'19:00:00',8,8),(9,'2024-11-09',109,'20:00:00',9,9),(10,'2024-11-10',110,'18:30:00',10,10);
 /*!40000 ALTER TABLE `bookings` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -56,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-11-06  7:35:19
+-- Dump completed on 2024-11-07  8:29:42
