@@ -39,6 +39,7 @@ CREATE TABLE `menu` (
 
 LOCK TABLES `menu` WRITE;
 /*!40000 ALTER TABLE `menu` DISABLE KEYS */;
+INSERT INTO `menu` VALUES (1,1,'Italian Classics','Italian'),(2,2,'Mexican Fiesta','Mexican'),(3,3,'Chinese Delights','Chinese'),(4,4,'Indian Spices','Indian'),(5,5,'Sushi Specials','Japanese'),(6,6,'French Pastries','French'),(7,7,'Greek Traditions','Greek'),(8,8,'Thai Cuisine','Thai'),(9,9,'Spanish Tapas','Spanish'),(10,10,'American Favorites','American');
 /*!40000 ALTER TABLE `menu` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-11-07  8:29:42
+-- Dump completed on 2024-11-09 10:52:45

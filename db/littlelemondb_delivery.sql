@@ -37,6 +37,7 @@ CREATE TABLE `delivery` (
 
 LOCK TABLES `delivery` WRITE;
 /*!40000 ALTER TABLE `delivery` DISABLE KEYS */;
+INSERT INTO `delivery` VALUES (1,'2024-11-01','Delivered'),(2,'2024-11-02','Pending'),(3,'2024-11-03','In Transit'),(4,'2024-11-04','Delivered'),(5,'2024-11-05','Cancelled'),(6,'2024-11-06','Pending'),(7,'2024-11-07','In Transit'),(8,'2024-11-08','Delivered'),(9,'2024-11-09','Pending'),(10,'2024-11-10','Delivered');
 /*!40000 ALTER TABLE `delivery` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -49,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-11-07  8:29:42
+-- Dump completed on 2024-11-09 10:52:46

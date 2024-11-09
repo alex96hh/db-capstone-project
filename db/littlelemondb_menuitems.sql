@@ -28,7 +28,7 @@ CREATE TABLE `menuitems` (
   `Type` varchar(255) NOT NULL,
   `Price` decimal(6,2) NOT NULL,
   PRIMARY KEY (`ItemID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,6 +37,7 @@ CREATE TABLE `menuitems` (
 
 LOCK TABLES `menuitems` WRITE;
 /*!40000 ALTER TABLE `menuitems` DISABLE KEYS */;
+INSERT INTO `menuitems` VALUES (1,'Margherita Pizza','Vegetarian',9.99),(2,'Tacos','Non-Vegetarian',7.99),(3,'Dumplings','Non-Vegetarian',8.99),(4,'Butter Chicken','Non-Vegetarian',10.99),(5,'Sushi Roll','Non-Vegetarian',12.99),(6,'Croissant','Vegetarian',4.99),(7,'Greek Salad','Vegetarian',6.99),(8,'Pad Thai','Vegetarian',9.49),(9,'Paella','Non-Vegetarian',13.99),(10,'Burger','Non-Vegetarian',8.49);
 /*!40000 ALTER TABLE `menuitems` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -49,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-11-07  8:29:43
+-- Dump completed on 2024-11-09 10:52:46

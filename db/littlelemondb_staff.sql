@@ -32,7 +32,7 @@ CREATE TABLE `staff` (
   `ContactNumber` varchar(255) DEFAULT NULL,
   `Email` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`StaffID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,6 +41,7 @@ CREATE TABLE `staff` (
 
 LOCK TABLES `staff` WRITE;
 /*!40000 ALTER TABLE `staff` DISABLE KEYS */;
+INSERT INTO `staff` VALUES (1,'Peter','Anderson','Manager',55000.00,'$','555-0201','peter.anderson@example.com'),(2,'Lucy','Taylor','Chef',45000.00,'$','555-0202','lucy.taylor@example.com'),(3,'Michael','Harris','Waiter',30000.00,'$','555-0203','michael.harris@example.com'),(4,'Linda','Martinez','Bartender',32000.00,'$','555-0204','linda.martinez@example.com'),(5,'Robert','Garcia','Host',28000.00,'$','555-0205','robert.garcia@example.com'),(6,'Sophia','Lopez','Waiter',30000.00,'$','555-0206','sophia.lopez@example.com'),(7,'Kevin','Martinez','Chef',47000.00,'$','555-0207','kevin.martinez@example.com'),(8,'Laura','White','Manager',60000.00,'$','555-0208','laura.white@example.com'),(9,'Jacob','Hall','Waiter',31000.00,'$','555-0209','jacob.hall@example.com'),(10,'Ella','Young','Host',29000.00,'$','555-0210','ella.young@example.com');
 /*!40000 ALTER TABLE `staff` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-11-07  8:29:43
+-- Dump completed on 2024-11-09 10:52:46
